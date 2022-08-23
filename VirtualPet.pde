@@ -2,6 +2,8 @@
 void setup(){
   size(400,400);
 }
+int x = 200;
+int y = 200;
 void draw(){
    //head
   fill(252, 194, 231);
