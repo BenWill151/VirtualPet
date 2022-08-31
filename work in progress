@@ -1,0 +1,24 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+
+public void setup() {
+  size(500, 500);
+  arduino = new Arduino(this, Arduino.list()[0], 57600);
+}
+
+public void draw() {
+  
+  module1();
+}
+
+
+void module1()
+{
+  float temp1 = arduino.analogRead(4);
+  int mx1 = 250;                                     
+  int my1 = 250;
+  rect(mx1-25,my1-25, 50, 50);
+  System.out.println(temp1);
+  
+}
