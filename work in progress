@@ -13,12 +13,14 @@ public void draw() {
 }
 
 
-void module1()
+void module1()//sound
 {
-  float temp1 = arduino.analogRead(4);
+  float sound1 = 20*log(arduino.analogRead(4));
   int mx1 = 250;                                     
   int my1 = 250;
+  fill(255,255,255);
   rect(mx1-25,my1-25, 50, 50);
-  System.out.println(temp1);
-  
+  System.out.println(sound1);
+  fill(0,0,0);
+  text(Integer.toString((int)sound1), 240,260);
 }
